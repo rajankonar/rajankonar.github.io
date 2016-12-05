@@ -4,8 +4,8 @@ html,
 body {
   margin: 0px; }
 
-.name-animate h1,
-.name-animate p {
+h1.name-firstname,
+p {
   opacity: 0; }
 
 body {

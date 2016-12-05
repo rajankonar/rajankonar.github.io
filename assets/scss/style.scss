@@ -5,12 +5,11 @@ body {
     margin: 0px;
 }
 
-.name-animate {
-    h1,
+    h1.name-firstname,
     p {
         opacity: 0;
     }
-}
+
 
 body {
     background: #cb2d3e url('../images/whitenoise.png');

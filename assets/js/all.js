@@ -74,7 +74,7 @@ TweenLite.to($animateThis, 1.4, {left:100});*/
 .to($animateThis, 2.5, {x: '0px', rotation: -720, ease: SlowMo.ease.config(0.1, 0.7, false)})*/
 
 tl.set(all_elements, {autoAlpha: 0});
-
+tl.set($firstname, {autoAlpha: 1})
 tl.fromTo($surname, 3, {autoAlpha: 0}, { autoAlpha:0.8}, 1)
     .staggerFromTo($firstname.find("span"), 0.5, {autoAlpha: 0}, { autoAlpha: 1 }, 0.2)
     .fromTo($me_saying, 3.0, {autoAlpha: 0},{ autoAlpha: 1},6)
