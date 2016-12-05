@@ -5,10 +5,12 @@ body {
     margin: 0px;
 }
 
-h1,p{
-opacity: 0;
+.name-animate {
+    h1,
+    p {
+        opacity: 0;
+    }
 }
-
 
 body {
     background: #cb2d3e url('../images/whitenoise.png');
@@ -73,7 +75,7 @@ nav {
     position: relative;
     display: table;
     width: 100%;
-     /* remove this bellow style after completion of other pages */
+    /* remove this bellow style after completion of other pages */
     margin-top: 10vh;
     /* till here */
     h1 {
