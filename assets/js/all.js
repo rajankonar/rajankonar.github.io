@@ -107,8 +107,8 @@ tl.fromTo($surname, 3, {autoAlpha: 0}, { autoAlpha:0.8}, 1)
    tl_scroll.to($section_about, 0.4, {top: '-135px', ease:SlowMo.easeOut});
        
     
-var scene_profile_picture = new ScrollMagic.Scene({triggerElement: "#about"}).addIndicators({name: "1 (duration: 0)"})    .setTween(tl_about).addTo(controller);
-var scene3 = new ScrollMagic.Scene({triggerElement: "#about"}).addIndicators({name: "1 (duration: 0)"})    .setTween(tl_scroll).addTo(controller);
+var scene_profile_picture = new ScrollMagic.Scene({triggerElement: "#about"})   .setTween(tl_about).addTo(controller);
+/*var scene3 = new ScrollMagic.Scene({triggerElement: "#about"}).addIndicators({name: "1 (duration: 0)"})    .setTween(tl_scroll).addTo(controller);*/
 
     
 window.onload = function () {
