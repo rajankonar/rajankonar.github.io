@@ -10,30 +10,50 @@
 <body>
     <section class="navigation">
         <nav>
-            <div class="navbar-brand">rk</div>
+            <div class="navbar-brand"><a href="home">rk</a></div>
             <div class="navbar-links">
                 <ul>
-                    <li>About</li>
+                    <li><a href="about">About</a></li>
                     <li>Work</li>
                     <li>Contact</li>
                 </ul>
             </div>
         </nav>
     </section>
-    <section class="name-animate">
-        <div class="surname-block" style="opacity:0;">
+    <section class="name-animate" id="home">
+        <div class="surname-block initial-hide" style="opacity:0;">
             <h1 class="name-surname">Konar</h1>
         </div>
         <h1 class="name-firstname">
-            <span style="opacity:0;">R</span>
-            <span style="opacity:0;">a</span>
-            <span style="opacity:0;">j</span>
-            <span style="opacity:0;">a</span>
-            <span style="opacity:0;">n</span>
+            <span class="initial-hide">R</span>
+            <span class="initial-hide">a</span>
+            <span class="initial-hide">j</span>
+            <span class="initial-hide">a</span>
+            <span class="initial-hide">n</span>
         </h1>
-        <p class="me-saying">An Aspiring FrontEnd Developer,
+        <p class="me-saying initial-hide">An Aspiring FrontEnd Developer,
             <Strong><span class="say-noob"> Ahh NOOOOOOB! </span> </Strong>
         </p>
+    </section>
+    <section class="about initial-hide" id="about"> 
+        <div class="container">
+            <div class="about-box">
+                <div class="about-picture about-divide50">
+                    <img src="assets/images/profile-picture.jpg" class="img-responsive img-profile-picture">
+                    <div class="viewmore-detailsbtn">
+                        <span>Wanna Share a beer? <img src="assets/images/iconmonster-beer.png" class="img-beer"></span>
+                    </div>
+                </div>
+                <div class="about-content about-divide50">
+                    <h2 class="section-title">About</h2>
+                    <div class="about-me">
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC</p>
+                        <p>
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="assets/js/all.min.js"></script>

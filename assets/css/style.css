@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,900");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,900");
 @import url("https://fonts.googleapis.com/css?family=Nothing+You+Could+Do");
 html,
 body {
-  margin: 0px; }
+  margin: 0px;
+  font-family: 'Raleway', sans-serif; }
 
-h1.surname-block,
-p {
+.initial-hide {
   opacity: 0; }
 
 body {
@@ -30,44 +30,60 @@ body {
   /* Internet Explorer/Edge */
   user-select: none; }
 
-nav {
-  padding: 30px 40px;
+.navigation {
   text-size-adjust: auto;
   font-size: 18px;
   text-transform: uppercase;
-  font-family: 'Raleway', sans-serif;
-  color: rgba(255, 255, 255, 0.78); }
-  nav .navbar-brand {
-    display: inline-block;
-    font-size: 25px;
-    font-weight: bold; }
-  nav .navbar-links {
-    float: right;
-    display: inline-block;
-    /* remove this bellow style after completion of these pages */
-    text-decoration: line-through;
-    /* remove till here */ }
-    nav .navbar-links:after {
-      content: "Work under progress! :D";
-      text-decoration: none;
+  font-family: Raleway, sans-serif;
+  color: rgba(255, 255, 255, 0.78);
+  position: fixed;
+  width: 96%;
+  padding: 1% 2%;
+  top: 0px;
+  left: 0px;
+  background-color: #de3b3c;
+  z-index: 2; }
+  .navigation nav {
+    /*padding: 30px 40px;*/
+    text-size-adjust: auto; }
+    .navigation nav a {
+      font-size: 18px;
+      text-transform: uppercase;
+      font-family: 'Raleway', sans-serif;
+      color: rgba(255, 255, 255, 0.78);
+      text-decoration: none; }
+    .navigation nav .navbar-brand {
+      display: inline-block; }
+      .navigation nav .navbar-brand a {
+        font-size: 25px;
+        font-weight: bold; }
+    .navigation nav .navbar-links {
+      float: right;
       display: inline-block;
-      font-weight: bold;
-      font-size: 12px;
-      text-align: center;
-      width: 100%; }
-    nav .navbar-links ul {
-      padding: 0px;
-      margin: 0px; }
-      nav .navbar-links ul li {
-        display: inline;
-        padding: 0px 20px; }
+      /* remove this bellow style after completion of these pages */
+      text-decoration: line-through;
+      /* remove till here */ }
+      .navigation nav .navbar-links:after {
+        content: "Work under progress! :D";
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        width: 100%; }
+      .navigation nav .navbar-links ul {
+        padding: 0px;
+        margin: 0px; }
+        .navigation nav .navbar-links ul li {
+          display: inline;
+          padding: 0px 20px; }
 
 .name-animate {
   position: relative;
   display: table;
   width: 100%;
   /* remove this bellow style after completion of other pages */
-  margin-top: 10vh;
+  margin-top: 25vh;
   /* till here */ }
   .name-animate h1 {
     padding: 0px;
@@ -130,23 +146,100 @@ nav {
         -ms-transform: skew(-20deg);
         transform: skew(-20deg); }
 
+.img-responsive {
+  width: 100%; }
+
+.section-title {
+  color: #d7343c;
+  font-size: 44px;
+  text-transform: capitalize;
+  margin: 0px; }
+
+.about {
+  margin: 200px 0px; }
+  .about .about-box {
+    display: table;
+    background-color: #f4f4f4;
+    padding: 0px 20px; }
+    .about .about-box .about-divide50 {
+      width: 50%;
+      display: table-cell;
+      vertical-align: top;
+      padding: 30px 2%; }
+      .about .about-box .about-divide50.about-picture {
+        position: relative; }
+        .about .about-box .about-divide50.about-picture img.img-responsive {
+          border: 10px solid #ffffff;
+          width: 95%;
+          /* top: -135px;*/
+          position: relative;
+          z-index: 1; }
+        .about .about-box .about-divide50.about-picture .viewmore-detailsbtn {
+          text-align: center;
+          width: 90%;
+          position: absolute;
+          bottom: 70px; }
+          .about .about-box .about-divide50.about-picture .viewmore-detailsbtn span {
+            cursor: pointer;
+            background-color: #ce303e; }
+            .about .about-box .about-divide50.about-picture .viewmore-detailsbtn span:hover {
+              background-color: #d85964; }
+          .about .about-box .about-divide50.about-picture .viewmore-detailsbtn span,
+          .about .about-box .about-divide50.about-picture .viewmore-detailsbtn img {
+            display: inline-block;
+            color: #fff;
+            padding: 5px 10px;
+            vertical-align: middle;
+            font-size: 20px; }
+          .about .about-box .about-divide50.about-picture .viewmore-detailsbtn img {
+            width: 30px;
+            padding-left: 5px;
+            padding-right: 5px; }
+      .about .about-box .about-divide50 .about-me {
+        font-weight: 300;
+        font-size: 22px; }
+
 /* media queries */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 992px;
+    margin: 0px auto; } }
+
 @media only screen and (max-width: 992px) {
-  .name-animate .name-surname:after {
-    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); }
-  .name-animate .me-saying {
-    font-size: 10px;
-    top: inherit; }
-  nav {
-    padding: 30px 10px; }
-    nav .navbar-brand {
-      display: block;
-      text-align: center;
-      padding: 0px 0px 10px; }
-    nav .navbar-links {
-      text-align: center;
-      float: none;
-      width: 100%; }
-      nav .navbar-links ul li {
-        padding: 0px 5px;
-        font-size: 16px; } }
+  .container {
+    width: 80%;
+    margin: 0px auto; }
+  .name-animate {
+    margin-top: 35vh; }
+    .name-animate .name-surname:after {
+      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); }
+    .name-animate .me-saying {
+      font-size: 10px;
+      top: inherit; }
+  .navigation {
+    padding: 5% 2%; }
+    .navigation nav {
+      /* padding: 30px 10px;*/ }
+      .navigation nav .navbar-brand {
+        display: block;
+        text-align: center;
+        padding: 0px 0px 10px; }
+      .navigation nav .navbar-links {
+        text-align: center;
+        width: 100%;
+        float: none;
+        width: 100%; }
+        .navigation nav .navbar-links ul li {
+          padding: 0px 5px;
+          font-size: 16px; }
+  .about .about-box .about-divide50 {
+    width: 96%;
+    display: inline-block;
+    padding-bottom: 10px; }
+    .about .about-box .about-divide50.about-picture img.img-responsive {
+      width: 92%; }
+    .about .about-box .about-divide50.about-picture .viewmore-detailsbtn {
+      width: 96%;
+      bottom: 30px; }
+    .about .about-box .about-divide50.about-content {
+      padding: 0px; } }

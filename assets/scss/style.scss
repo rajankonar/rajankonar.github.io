@@ -1,174 +1,295 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,900');
-@import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
-html,
-body {
-    margin: 0px;
-}
-
-h1.surname-block,
-p {
-    opacity: 0;
-}
-
-body {
-    background: #cb2d3e url('../images/whitenoise.png');
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #cb2d3e, #ef473a), url('../images/whitenoise.png');
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #cb2d3e, #ef473a), url('../images/whitenoise.png');
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    /*background-blend-mode: multiply;*/
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Chrome/Safari/Opera */
-    -khtml-user-select: none;
-    /* Konqueror */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-}
-
-nav {
-    padding: 30px 40px;
-    text-size-adjust: auto;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    color: rgba(255, 255, 255, 0.78);
-    .navbar-brand {
-        display: inline-block;
-        font-size: 25px;
-        font-weight: bold;
-    }
-    .navbar-links {
-        float: right;
-        display: inline-block;
-        /* remove this bellow style after completion of these pages */
-        text-decoration: line-through;
-        &:after {
-            content: "Work under progress! :D";
-            text-decoration: none;
-            display: inline-block;
-            font-weight: bold;
-            font-size: 12px;
-            text-align: center;
-            width: 100%;
-        }
-        /* remove till here */
-        ul {
-            padding: 0px;
-            margin: 0px;
-            li {
-                display: inline;
-                padding: 0px 20px;
-            }
-        }
-    }
-}
-
-.name-animate {
-    position: relative;
-    display: table;
-    width: 100%;
-    /* remove this bellow style after completion of other pages */
-    margin-top: 10vh;
-    /* till here */
-    h1 {
-        padding: 0px;
+    @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,900');
+    @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+    $color-red:#ce303e;
+    html,
+    body {
         margin: 0px;
-        text-align: center;
+        font-family: 'Raleway', sans-serif;
     }
-    .name-surname {
-        text-transform: uppercase;
-        font-size: 15vw;
+    
+    .initial-hide
+    /*,
+p*/
+    
+    {
+        opacity: 0;
+    }
+    
+    body {
         background: #cb2d3e url('../images/whitenoise.png');
         /* fallback for old browsers */
         background: -webkit-linear-gradient(to left, #cb2d3e, #ef473a), url('../images/whitenoise.png');
         /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to left, #cb2d3e, #ef473a), url('../images/whitenoise.png');
-        font-family: 'Raleway', sans-serif;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #d7363c;
-        &:after {
-            content: "KONAR";
-            color: #000;
-            /*text-shadow: 8px 20px 52px rgba(0, 0, 0, 0.6);*/
-            text-shadow: 8px 11px 33px rgba(0, 0, 0, 0.6);
-            position: absolute;
-            text-align: center;
-            width: 100%;
-            left: 0px;
-            z-index: -1;
-        }
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /*background-blend-mode: multiply;*/
+        -webkit-touch-callout: none;
+        /* iOS Safari */
+        -webkit-user-select: none;
+        /* Chrome/Safari/Opera */
+        -khtml-user-select: none;
+        /* Konqueror */
+        -moz-user-select: none;
+        /* Firefox */
+        -ms-user-select: none;
+        /* Internet Explorer/Edge */
+        user-select: none;
     }
-    .name-firstname {
-        font-family: 'Nothing You Could Do', cursive;
-        color: rgba(255, 255, 255, 0.78);
-        font-size: 7vw;
-        position: absolute;
-        width: 100%;
+    
+    .navigation {
+        text-size-adjust: auto;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: Raleway, sans-serif;
+        color: rgba(255, 255, 255, .78);
+        position: fixed;
+        width: 96%;
+        padding: 1% 2%;
         top: 0px;
-        line-height: 2.5;
-        letter-spacing: 7px;
-        display: table;
-    }
-    .me-saying {
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-        color: rgba(255, 255, 255, 0.65);
-        font-size: 20px;
-        padding: 0px;
-        margin: 0px;
-        position: relative;
-        width: 100%;
-        top: -15px;
-        strong {
-            display: block;
-            span {
-                background-color: white;
-                color: #cf303e;
-                padding: 5px 10px;
+        left: 0px;
+        background-color: rgb(222, 59, 60);
+        z-index: 2;
+        nav {
+            /*padding: 30px 40px;*/
+            text-size-adjust: auto;
+            a {
+                font-size: 18px;
+                text-transform: uppercase;
+                font-family: 'Raleway', sans-serif;
+                color: rgba(255, 255, 255, 0.78);
+                text-decoration: none;
+            }
+            .navbar-brand {
                 display: inline-block;
-                margin-top: 8px;
-                transform: skew(-20deg);
+                a {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+            }
+            .navbar-links {
+                float: right;
+                display: inline-block;
+                /* remove this bellow style after completion of these pages */
+                text-decoration: line-through;
+                &:after {
+                    content: "Work under progress! :D";
+                    text-decoration: none;
+                    display: inline-block;
+                    font-weight: bold;
+                    font-size: 12px;
+                    text-align: center;
+                    width: 100%;
+                }
+                /* remove till here */
+                ul {
+                    padding: 0px;
+                    margin: 0px;
+                    li {
+                        display: inline;
+                        padding: 0px 20px;
+                    }
+                }
             }
         }
     }
-}
-
-
-/* media queries */
-
-@media only screen and (max-width: 992px) {
+    
     .name-animate {
-        .name-surname:after {
-            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        position: relative;
+        display: table;
+        width: 100%;
+        /* remove this bellow style after completion of other pages */
+        margin-top: 25vh;
+        /* till here */
+        h1 {
+            padding: 0px;
+            margin: 0px;
+            text-align: center;
+        }
+        .name-surname {
+            text-transform: uppercase;
+            font-size: 15vw;
+            background: #cb2d3e url('../images/whitenoise.png');
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #cb2d3e, #ef473a), url('../images/whitenoise.png');
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #cb2d3e, #ef473a), url('../images/whitenoise.png');
+            font-family: 'Raleway', sans-serif;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #d7363c;
+            &:after {
+                content: "KONAR";
+                color: #000;
+                /*text-shadow: 8px 20px 52px rgba(0, 0, 0, 0.6);*/
+                text-shadow: 8px 11px 33px rgba(0, 0, 0, 0.6);
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                left: 0px;
+                z-index: -1;
+            }
+        }
+        .name-firstname {
+            font-family: 'Nothing You Could Do', cursive;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 7vw;
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            line-height: 2.5;
+            letter-spacing: 7px;
+            display: table;
         }
         .me-saying {
-            font-size: 10px;
-            top: inherit;
-        }
-    }
-    nav {
-        padding: 30px 10px;
-        .navbar-brand {
-            display: block;
             text-align: center;
-            padding: 0px 0px 10px;
-        }
-        .navbar-links {
-            text-align: center;
-            float: none;
+            font-family: 'Raleway', sans-serif;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 20px;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
             width: 100%;
-            ul li {
-                padding: 0px 5px;
-                font-size: 16px;
+            top: -15px;
+            strong {
+                display: block;
+                span {
+                    background-color: white;
+                    color: #cf303e;
+                    padding: 5px 10px;
+                    display: inline-block;
+                    margin-top: 8px;
+                    transform: skew(-20deg);
+                }
             }
         }
     }
-}
+    
+    .img-responsive {
+        width: 100%;
+    }
+    
+    .section-title {
+        color: #d7343c;
+        font-size: 44px;
+        text-transform: capitalize;
+        margin: 0px;
+    }
+    
+    .about {
+        margin: 200px 0px;
+        .about-box {
+            display: table;
+            background-color: rgb(244, 244, 244);
+            padding: 0px 20px;
+            .about-divide50 {
+                width: 50%;
+                display: table-cell;
+                vertical-align: top;
+                padding: 30px 2%;
+                &.about-picture {
+                    position: relative;
+                    img.img-responsive {
+                        border: 10px solid #ffffff;
+                        width: 95%;
+                        /* top: -135px;*/
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .viewmore-detailsbtn {
+                        text-align: center;
+                        width: 90%;
+                        position: absolute;
+                        bottom: 70px;
+                        span {
+                            cursor: pointer;
+                            background-color: $color-red;
+                            &:hover {
+                                background-color: lighten($color-red, 10%);
+                            }
+                        }
+                        span,
+                        img {
+                            display: inline-block;
+                            color: #fff;
+                            padding: 5px 10px;
+                            vertical-align: middle;
+                            font-size: 20px;
+                        }
+                        img {
+                            width: 30px;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+                .about-me {
+                    font-weight: 300;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+    /* media queries */
+    
+    @media only screen and (min-width: 992px) {
+        .container {
+            width: 992px;
+            margin: 0px auto;
+        }
+    }
+    
+    @media only screen and (max-width: 992px) {
+        .container {
+            width: 80%;
+            margin: 0px auto;
+        }
+        .name-animate {
+            margin-top: 35vh;
+            .name-surname:after {
+                text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            }
+            .me-saying {
+                font-size: 10px;
+                top: inherit;
+            }
+        }
+        .navigation {
+            padding: 5% 2%;
+            nav {
+                /* padding: 30px 10px;*/
+                .navbar-brand {
+                    display: block;
+                    text-align: center;
+                    padding: 0px 0px 10px;
+                }
+                .navbar-links {
+                    text-align: center;
+                    width: 100%;
+                    float: none;
+                    width: 100%;
+                    ul li {
+                        padding: 0px 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .about .about-box .about-divide50 {
+            width: 96%;
+            display: inline-block;
+            padding-bottom: 10px;
+            &.about-picture {
+                img.img-responsive {
+                    width: 92%;
+                }
+                .viewmore-detailsbtn {
+                    width: 96%;
+                    bottom: 30px;
+                }
+            }
+            &.about-content {
+                padding: 0px;
+            }
+        }
+    }
