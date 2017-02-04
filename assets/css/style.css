@@ -879,6 +879,8 @@ body {
   margin: 200px 0px; }
   .work .section-title {
     text-align: center; }
+  .work a:hover, .work a:active, .work a:focus {
+    text-decoration: none; }
   .work .work-box {
     display: -webkit-box;
     display: -webkit-flex;
@@ -904,7 +906,8 @@ body {
         .work .work-box .work-projects .workprojectcontainer .work-desc {
           padding: 25px 20px;
           font-size: 16px;
-          font-weight: 300; }
+          font-weight: 300;
+          color: #000; }
           .work .work-box .work-projects .workprojectcontainer .work-desc .text-showup {
             color: #ce303e;
             font-size: 20px; }
@@ -913,7 +916,9 @@ body {
 @media only screen and (min-width: 992px) {
   .container {
     width: 992px;
-    margin: 0px auto; } }
+    margin: 0px auto; }
+  .navigation .navbar-links {
+    margin-top: 5px; } }
 
 @media only screen and (max-width: 992px) {
   .container {

@@ -240,6 +240,7 @@ p*/
         .section-title {
             text-align: center;
         }
+        a:hover,a:active, a:focus{text-decoration: none;}
         margin: 200px 0px;
         .work-box {
             display: flex;
@@ -261,6 +262,7 @@ p*/
                         padding: 25px 20px;
                         font-size: 16px;
                         font-weight: 300;
+                        color: #000;
                         .text-showup {
                             color: $color-red;
                             font-size: 20px;
@@ -276,6 +278,9 @@ p*/
         .container {
             width: 992px;
             margin: 0px auto;
+        }
+        .navigation .navbar-links{
+                margin-top: 5px;
         }
     }
     
