@@ -289,13 +289,20 @@ p*/
             width: 90%;
             margin: 0px auto;
         }
+        
         .name-animate {
             margin-top: 35vh;
-            .name-surname:after {
-                text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+            .name-surname{ 
+                    font-size: 20vw;
+                &:after {
+                    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+                }
+            }
+            .name-firstname{
+                font-size: 9.5vw; 
             }
             .me-saying {
-                font-size: 10px;
+                font-size: 12px;
                 top: inherit;
             }
         }
@@ -340,6 +347,8 @@ p*/
         .section-title {
             text-align: center;
         }
+        
+        
     }
 
 

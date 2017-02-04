@@ -926,10 +926,14 @@ body {
     margin: 0px auto; }
   .name-animate {
     margin-top: 35vh; }
-    .name-animate .name-surname:after {
-      text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); }
+    .name-animate .name-surname {
+      font-size: 20vw; }
+      .name-animate .name-surname:after {
+        text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); }
+    .name-animate .name-firstname {
+      font-size: 9.5vw; }
     .name-animate .me-saying {
-      font-size: 10px;
+      font-size: 12px;
       top: inherit; }
   .navigation {
     padding: 3% 2% 5%; }
