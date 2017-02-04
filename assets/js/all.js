@@ -112,17 +112,33 @@ var scene_profile_picture = new ScrollMagic.Scene({triggerElement: "#about"})   
 
     
 window.onload = function () {
+    check_resolution();
     tl.play();
 }
-
-
+var heightFromTop=150;
+function check_resolution(linkClicked){
+    if(window.innerWidth <768 ){
+        if(linkClicked=="about" || linkClicked=="home"){
+            heightFromTop=150;
+       /* }else if(){
+            heightFromTop=150;*/
+        }else{
+            heightFromTop=25;
+        }
+    }else{
+        heightFromTop=150;
+    }
+    //console.log(heightFromTop);
+}
 /* Smooth scroll  */
 
 $(".navbar-brand a,.navbar-links a").on("click", function(e) {
+   //console.log($(this).attr("href"));
+    check_resolution($(this).attr("href"));
 		var $this = $(this),
 			  $href = $this.attr("href"),
 			  $target = $("#" + $href),
-			  $navHeight = $(".navigation").outerHeight()+150,
+			  $navHeight = $(".navigation").outerHeight()+heightFromTop,
 			  $targetTopY = $target.offset().top - $navHeight;
 		/* update active class for nav elements */
 		$(".navbar-links a").removeClass("active");

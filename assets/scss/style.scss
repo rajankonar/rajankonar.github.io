@@ -1,5 +1,6 @@
     @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,900');
     @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
+    @import 'customized_bootstrap';
     $color-red:#ce303e;
     html,
     body {
@@ -43,7 +44,7 @@ p*/
         font-family: Raleway, sans-serif;
         color: rgba(255, 255, 255, .78);
         position: fixed;
-        width: 96%;
+        width: 100%;
         padding: 1% 2%;
         top: 0px;
         left: 0px;
@@ -70,7 +71,7 @@ p*/
                 float: right;
                 display: inline-block;
                 /* remove this bellow style after completion of these pages */
-                text-decoration: line-through;
+                /*text-decoration: line-through;
                 &:after {
                     content: "Work under progress! :D";
                     text-decoration: none;
@@ -79,7 +80,7 @@ p*/
                     font-size: 12px;
                     text-align: center;
                     width: 100%;
-                }
+                }*/
                 /* remove till here */
                 ul {
                     padding: 0px;
@@ -176,6 +177,10 @@ p*/
         margin: 0px;
     }
     
+    .text-white {
+        color: #fff;
+    }
+    
     .about {
         margin: 200px 0px;
         .about-box {
@@ -212,7 +217,7 @@ p*/
                         img {
                             display: inline-block;
                             color: #fff;
-                            padding: 5px 10px;
+                            padding: 7px 12px;
                             vertical-align: middle;
                             font-size: 20px;
                         }
@@ -230,6 +235,41 @@ p*/
             }
         }
     }
+    
+    .work {
+        .section-title {
+            text-align: center;
+        }
+        margin: 200px 0px;
+        .work-box {
+            display: flex;
+            margin-top: 10px;
+            .work-projects {
+                padding-left: 25px;
+                padding-right: 25px;
+                display: inline-flex;
+                .workprojectcontainer {
+                    background-color: #fff;
+                    box-shadow: 6px 8px 38px 0px #691b1d;
+                    margin: 20px 0px;
+                    border-top: 10px solid #e62c3b;
+                    &,
+                    .work-img {
+                        border-bottom: 10px solid #e62c3b;
+                    }
+                    .work-desc {
+                        padding: 25px 20px;
+                        font-size: 16px;
+                        font-weight: 300;
+                        .text-showup {
+                            color: $color-red;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     /* media queries */
     
     @media only screen and (min-width: 992px) {
@@ -241,7 +281,7 @@ p*/
     
     @media only screen and (max-width: 992px) {
         .container {
-            width: 80%;
+            width: 90%;
             margin: 0px auto;
         }
         .name-animate {
@@ -255,7 +295,7 @@ p*/
             }
         }
         .navigation {
-            padding: 3% 2%;
+            padding: 3% 2% 5%;
             nav {
                 /* padding: 30px 10px;*/
                 .navbar-brand {
@@ -276,12 +316,12 @@ p*/
             }
         }
         .about .about-box .about-divide50 {
-            width: 96%;
+            width: 100%;
             display: inline-block;
             padding-bottom: 10px;
             &.about-picture {
                 img.img-responsive {
-                    width: 92%;
+                    width: 100%;
                 }
                 .viewmore-detailsbtn {
                     width: 96%;
@@ -294,5 +334,12 @@ p*/
         }
         .section-title {
             text-align: center;
+        }
+    }
+
+
+ @media only screen and (max-width: 768px) {
+        .work .work-box {
+            flex-direction: column;
         }
     }
