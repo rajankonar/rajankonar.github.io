@@ -78,6 +78,7 @@ TweenLite.to($animateThis, 1.4, {left:100});*/
 .to($animateThis, 2.5, {x: '0px', rotation: -720, ease: SlowMo.ease.config(0.1, 0.7, false)})*/
 
 tl.set(all_elements, {autoAlpha: 0});
+//tl.set("body", { overflow: 'hidden' });
 /*tl.set($firstname, {autoAlpha: 1});*/
 tl.fromTo($surname, 3, {autoAlpha: 0}, { autoAlpha:0.8}, 1)
     .staggerFromTo($firstname.find("span"), 0.5, {autoAlpha: 0}, { autoAlpha: 1 }, 0.2)
@@ -88,13 +89,12 @@ tl.fromTo($surname, 3, {autoAlpha: 0}, { autoAlpha:0.8}, 1)
     .to($say_noob, 2, {
         bezier: [
         {x:$say_noob.x + 10, y:$say_noob.y - 20, scaleX: 1,   scaleY: 1},
-        {x:$say_noob.x + 20, y:$say_noob.y + 20, scaleX: 1.2, scaleY: .8},
+        {x:$say_noob.x + 20, y:$say_noob.y + 20, scaleX: 1.2, scaleY: 0.8},
         {x:$say_noob.x + 20, y:$say_noob.y + 30, scaleX: 1,   scaleY: 1}],
        
-        ease:Power3.easeOut,yoyo:true, repeat:-1, repeatDelay:0, yoyo:true
+        ease:Power3.easeOut,yoyo:true, repeat:-1, repeatDelay:0
     })
  .fromTo($section_about, 5, {autoAlpha: 0},{ autoAlpha: 1},10);
-   
 /* .to($say_noob, 0.2, {css:{scaleX:0.5}, ease:Power3.easeOut})
 .to($say_noob, 0.2, {css:{scaleX:1.5}, ease:Power3.easeOut})
 .to($say_noob, 0.2, {css:{scaleX:1}, ease:Power3.easeOut});
@@ -114,7 +114,7 @@ var scene_profile_picture = new ScrollMagic.Scene({triggerElement: "#about"})   
 window.onload = function () {
     check_resolution();
     tl.play();
-}
+};
 var heightFromTop=150;
 function check_resolution(linkClicked){
     if(window.innerWidth <768 ){
@@ -132,7 +132,7 @@ function check_resolution(linkClicked){
 }
 /* Smooth scroll  */
 
-$(".navbar-brand a,.navbar-links a").on("click", function(e) {
+$(".navbar-brand a,.navbar-links a,.viewmore-detailsbtn a").on("click", function(e) {
    //console.log($(this).attr("href"));
     check_resolution($(this).attr("href"));
 		var $this = $(this),
